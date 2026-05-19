@@ -58,27 +58,51 @@ def coverage_heatmap(datasets: pd.DataFrame) -> None:
     print("Saved coverage_heatmap.png")
 
 
+def _column_layout(G: nx.DiGraph) -> dict:
+    """Position nodes in four vertical columns by type: model | dataset | condition | skin_tone."""
+    col_order = ["model", "dataset", "condition", "skin_tone"]
+    groups: dict[str, list] = {t: [] for t in col_order}
+    for n, d in G.nodes(data=True):
+        t = d.get("type", "")
+        if t in groups:
+            groups[t].append(n)
+    pos = {}
+    x_positions = {t: i * 1.0 for i, t in enumerate(col_order)}
+    for node_type, x in x_positions.items():
+        nodes = sorted(groups[node_type])
+        n = len(nodes)
+        for i, node in enumerate(nodes):
+            pos[node] = (x, (i - (n - 1) / 2) * 0.32)
+    return pos
+
+
 def graph_viz(G: nx.DiGraph) -> None:
-    """Save spring-layout knowledge graph to output/graph_viz.png."""
-    pos = nx.spring_layout(G, seed=42)
+    """Save column-layout knowledge graph to output/graph_viz.png."""
+    pos = _column_layout(G)
     degrees = dict(G.degree())
-    node_sizes = [300 + degrees[n] * 200 for n in G.nodes()]
+    node_sizes = [400 + degrees[n] * 180 for n in G.nodes()]
     node_colors = [NODE_COLORS.get(G.nodes[n].get("type", ""), "#aaaaaa") for n in G.nodes()]
 
-    fig, ax = plt.subplots(figsize=(14, 10))
+    fig, ax = plt.subplots(figsize=(16, 9))
     nx.draw_networkx_nodes(G, pos, ax=ax, node_size=node_sizes,
                            node_color=node_colors, alpha=0.92)
-    nx.draw_networkx_edges(G, pos, ax=ax, alpha=0.4, arrows=True,
-                           arrowsize=12, edge_color="#888888",
-                           connectionstyle="arc3,rad=0.05")
-    nx.draw_networkx_labels(G, pos, ax=ax, font_size=7,
-                            bbox={"boxstyle": "round,pad=0.2", "fc": "white", "alpha": 0.6})
+    nx.draw_networkx_edges(G, pos, ax=ax, alpha=0.35, arrows=True,
+                           arrowsize=10, edge_color="#888888",
+                           connectionstyle="arc3,rad=0.15")
+    nx.draw_networkx_labels(G, pos, ax=ax, font_size=8,
+                            bbox={"boxstyle": "round,pad=0.25", "fc": "white", "alpha": 0.75})
+
+    # Column header annotations
+    for label, x in zip(["Models", "Datasets", "Conditions", "Skin Tones"],
+                         [0.0, 1.0, 2.0, 3.0]):
+        ax.text(x, 1.08, label, ha="center", va="bottom", fontsize=10,
+                fontweight="bold", transform=ax.get_xaxis_transform())
 
     legend_handles = [
         mpatches.Patch(color=color, label=label.replace("_", " ").title())
         for label, color in NODE_COLORS.items()
     ]
-    ax.legend(handles=legend_handles, loc="upper left", fontsize=10, framealpha=0.9)
+    ax.legend(handles=legend_handles, loc="lower left", fontsize=10, framealpha=0.9)
     ax.set_title("SkinGraph knowledge graph", fontsize=14, pad=12)
     ax.axis("off")
 
