@@ -1,0 +1,7 @@
+condition,body_system,miss_rate_fst_iv_vi,source_paper
+melanoma,integumentary,0.35,"Adamson & Smith 2018 NEJM doi.org/10.1056/NEJMp1714529 — documented higher miss rate for FST IV-VI due to amelanotic presentation and lower index of suspicion on dark skin"
+atopic_dermatitis,integumentary,0.18,"Kaufman et al. 2018 JAAD — erythema less visible on dark skin; papular and follicular variants more common but under-recognized in AI models"
+psoriasis,integumentary,0.20,"Alexis et al. 2016 J Drugs Dermatol — plaques appear violaceous/hyperpigmented rather than salmon-pink on FST IV-VI; scale less apparent"
+acne_vulgaris,integumentary,0.12,"Davis & Callender 2010 J Clin Aesthet Dermatol — post-inflammatory hyperpigmentation dominates presentation; inflammatory lesion grading trained on FST I-III underperforms"
+seborrheic_dermatitis,integumentary,0.22,"Alexis 2010 J Drugs Dermatol — petaloid and pityriasiform variants predominate on dark skin; AI trained on erythematous patches fails to generalize"
+tinea_versicolor,integumentary,0.28,"Schwartz 2004 Int J Dermatol — hypopigmented macules on FST V-VI frequently misclassified as vitiligo or pityriasis alba; hyperpigmented variant on FST I-III better represented in training data"

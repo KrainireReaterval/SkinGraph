@@ -1,0 +1,7 @@
+model_name,architecture,trained_on,task,paper_url
+Esteva-2017,InceptionV3,ISIC_Archive,skin_lesion_classification,https://doi.org/10.1038/nature21056
+Han-2018,ResNet-50,HAM10000,melanoma_detection,https://doi.org/10.1016/j.jid.2018.01.016
+Haenssle-2018,ResNet-based,HAM10000,melanoma_vs_nevus,https://doi.org/10.1093/annonc/mdy166
+Groh-2021-baseline,EfficientNet-B4,Fitzpatrick17k,skin_condition_classification,https://arxiv.org/abs/2104.09957
+DeepDerm,DenseNet-121,HAM10000,skin_condition_classification,https://doi.org/10.1038/s41591-020-0842-3
+DDI-ResNet,ResNet-50,HAM10000,skin_condition_classification,https://doi.org/10.1126/sciadv.abq6147
