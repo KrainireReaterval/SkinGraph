@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d9" for="edge" attr.name="rate" attr.type="double" />
+  <key id="d8" for="edge" attr.name="pct" attr.type="double" />
+  <key id="d7" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d6" for="node" attr.name="task" attr.type="string" />
+  <key id="d5" for="node" attr.name="architecture" attr.type="string" />
+  <key id="d4" for="node" attr.name="miss_rate" attr.type="double" />
+  <key id="d3" for="node" attr.name="body_system" attr.type="string" />
+  <key id="d2" for="node" attr.name="year" attr.type="long" />
+  <key id="d1" for="node" attr.name="total_images" attr.type="long" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="FST_I">
+      <data key="d0">skin_tone</data>
+    </node>
+    <node id="FST_II">
+      <data key="d0">skin_tone</data>
+    </node>
+    <node id="FST_III">
+      <data key="d0">skin_tone</data>
+    </node>
+    <node id="FST_IV">
+      <data key="d0">skin_tone</data>
+    </node>
+    <node id="FST_V">
+      <data key="d0">skin_tone</data>
+    </node>
+    <node id="FST_VI">
+      <data key="d0">skin_tone</data>
+    </node>
+    <node id="HAM10000">
+      <data key="d0">dataset</data>
+      <data key="d1">10015</data>
+      <data key="d2">2018</data>
+    </node>
+    <node id="ISIC_Archive">
+      <data key="d0">dataset</data>
+      <data key="d1">25331</data>
+      <data key="d2">2016</data>
+    </node>
+    <node id="Fitzpatrick17k">
+      <data key="d0">dataset</data>
+      <data key="d1">16577</data>
+      <data key="d2">2021</data>
+    </node>
+    <node id="DDI">
+      <data key="d0">dataset</data>
+      <data key="d1">656</data>
+      <data key="d2">2022</data>
+    </node>
+    <node id="PH2">
+      <data key="d0">dataset</data>
+      <data key="d1">200</data>
+      <data key="d2">2013</data>
+    </node>
+    <node id="SD-198">
+      <data key="d0">dataset</data>
+      <data key="d1">6584</data>
+      <data key="d2">2016</data>
+    </node>
+    <node id="melanoma">
+      <data key="d0">condition</data>
+      <data key="d3">integumentary</data>
+      <data key="d4">0.35</data>
+    </node>
+    <node id="atopic_dermatitis">
+      <data key="d0">condition</data>
+      <data key="d3">integumentary</data>
+      <data key="d4">0.18</data>
+    </node>
+    <node id="psoriasis">
+      <data key="d0">condition</data>
+      <data key="d3">integumentary</data>
+      <data key="d4">0.2</data>
+    </node>
+    <node id="acne_vulgaris">
+      <data key="d0">condition</data>
+      <data key="d3">integumentary</data>
+      <data key="d4">0.12</data>
+    </node>
+    <node id="seborrheic_dermatitis">
+      <data key="d0">condition</data>
+      <data key="d3">integumentary</data>
+      <data key="d4">0.22</data>
+    </node>
+    <node id="tinea_versicolor">
+      <data key="d0">condition</data>
+      <data key="d3">integumentary</data>
+      <data key="d4">0.28</data>
+    </node>
+    <node id="Esteva-2017">
+      <data key="d0">model</data>
+      <data key="d5">InceptionV3</data>
+      <data key="d6">skin_lesion_classification</data>
+    </node>
+    <node id="Han-2018">
+      <data key="d0">model</data>
+      <data key="d5">ResNet-50</data>
+      <data key="d6">melanoma_detection</data>
+    </node>
+    <node id="Haenssle-2018">
+      <data key="d0">model</data>
+      <data key="d5">ResNet-based</data>
+      <data key="d6">melanoma_vs_nevus</data>
+    </node>
+    <node id="Groh-2021-baseline">
+      <data key="d0">model</data>
+      <data key="d5">EfficientNet-B4</data>
+      <data key="d6">skin_condition_classification</data>
+    </node>
+    <node id="DeepDerm">
+      <data key="d0">model</data>
+      <data key="d5">DenseNet-121</data>
+      <data key="d6">skin_condition_classification</data>
+    </node>
+    <node id="DDI-ResNet">
+      <data key="d0">model</data>
+      <data key="d5">ResNet-50</data>
+      <data key="d6">skin_condition_classification</data>
+    </node>
+    <edge source="HAM10000" target="FST_I">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.4</data>
+    </edge>
+    <edge source="HAM10000" target="FST_II">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.35</data>
+    </edge>
+    <edge source="HAM10000" target="FST_III">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.15</data>
+    </edge>
+    <edge source="HAM10000" target="FST_IV">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.07</data>
+    </edge>
+    <edge source="HAM10000" target="FST_V">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.02</data>
+    </edge>
+    <edge source="HAM10000" target="FST_VI">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.01</data>
+    </edge>
+    <edge source="ISIC_Archive" target="FST_I">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.35</data>
+    </edge>
+    <edge source="ISIC_Archive" target="FST_II">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.35</data>
+    </edge>
+    <edge source="ISIC_Archive" target="FST_III">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.18</data>
+    </edge>
+    <edge source="ISIC_Archive" target="FST_IV">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.08</data>
+    </edge>
+    <edge source="ISIC_Archive" target="FST_V">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.03</data>
+    </edge>
+    <edge source="ISIC_Archive" target="FST_VI">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.01</data>
+    </edge>
+    <edge source="Fitzpatrick17k" target="FST_I">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.17</data>
+    </edge>
+    <edge source="Fitzpatrick17k" target="FST_II">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.28</data>
+    </edge>
+    <edge source="Fitzpatrick17k" target="FST_III">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.35</data>
+    </edge>
+    <edge source="Fitzpatrick17k" target="FST_IV">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.12</data>
+    </edge>
+    <edge source="Fitzpatrick17k" target="FST_V">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.06</data>
+    </edge>
+    <edge source="Fitzpatrick17k" target="FST_VI">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.02</data>
+    </edge>
+    <edge source="DDI" target="FST_I">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.1</data>
+    </edge>
+    <edge source="DDI" target="FST_II">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.15</data>
+    </edge>
+    <edge source="DDI" target="FST_III">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.25</data>
+    </edge>
+    <edge source="DDI" target="FST_IV">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.22</data>
+    </edge>
+    <edge source="DDI" target="FST_V">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.17</data>
+    </edge>
+    <edge source="DDI" target="FST_VI">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.11</data>
+    </edge>
+    <edge source="PH2" target="FST_I">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.42</data>
+    </edge>
+    <edge source="PH2" target="FST_II">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.4</data>
+    </edge>
+    <edge source="PH2" target="FST_III">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.13</data>
+    </edge>
+    <edge source="PH2" target="FST_IV">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.03</data>
+    </edge>
+    <edge source="PH2" target="FST_V">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.01</data>
+    </edge>
+    <edge source="PH2" target="FST_VI">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.01</data>
+    </edge>
+    <edge source="SD-198" target="FST_I">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.05</data>
+    </edge>
+    <edge source="SD-198" target="FST_II">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.15</data>
+    </edge>
+    <edge source="SD-198" target="FST_III">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.42</data>
+    </edge>
+    <edge source="SD-198" target="FST_IV">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.28</data>
+    </edge>
+    <edge source="SD-198" target="FST_V">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.07</data>
+    </edge>
+    <edge source="SD-198" target="FST_VI">
+      <data key="d7">CONTAINS</data>
+      <data key="d8">0.03</data>
+    </edge>
+    <edge source="melanoma" target="FST_IV">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.35</data>
+    </edge>
+    <edge source="melanoma" target="FST_V">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.35</data>
+    </edge>
+    <edge source="melanoma" target="FST_VI">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.35</data>
+    </edge>
+    <edge source="atopic_dermatitis" target="FST_IV">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.18</data>
+    </edge>
+    <edge source="atopic_dermatitis" target="FST_V">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.18</data>
+    </edge>
+    <edge source="atopic_dermatitis" target="FST_VI">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.18</data>
+    </edge>
+    <edge source="psoriasis" target="FST_IV">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.2</data>
+    </edge>
+    <edge source="psoriasis" target="FST_V">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.2</data>
+    </edge>
+    <edge source="psoriasis" target="FST_VI">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.2</data>
+    </edge>
+    <edge source="acne_vulgaris" target="FST_IV">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.12</data>
+    </edge>
+    <edge source="acne_vulgaris" target="FST_V">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.12</data>
+    </edge>
+    <edge source="acne_vulgaris" target="FST_VI">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.12</data>
+    </edge>
+    <edge source="seborrheic_dermatitis" target="FST_IV">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.22</data>
+    </edge>
+    <edge source="seborrheic_dermatitis" target="FST_V">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.22</data>
+    </edge>
+    <edge source="seborrheic_dermatitis" target="FST_VI">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.22</data>
+    </edge>
+    <edge source="tinea_versicolor" target="FST_IV">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.28</data>
+    </edge>
+    <edge source="tinea_versicolor" target="FST_V">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.28</data>
+    </edge>
+    <edge source="tinea_versicolor" target="FST_VI">
+      <data key="d7">HIGH_MISS_RATE_IN</data>
+      <data key="d9">0.28</data>
+    </edge>
+    <edge source="Esteva-2017" target="ISIC_Archive">
+      <data key="d7">TRAINED_ON</data>
+    </edge>
+    <edge source="Esteva-2017" target="melanoma">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Han-2018" target="HAM10000">
+      <data key="d7">TRAINED_ON</data>
+    </edge>
+    <edge source="Han-2018" target="melanoma">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Haenssle-2018" target="HAM10000">
+      <data key="d7">TRAINED_ON</data>
+    </edge>
+    <edge source="Haenssle-2018" target="melanoma">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="Fitzpatrick17k">
+      <data key="d7">TRAINED_ON</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="melanoma">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="atopic_dermatitis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="psoriasis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="acne_vulgaris">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="seborrheic_dermatitis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="Groh-2021-baseline" target="tinea_versicolor">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DeepDerm" target="HAM10000">
+      <data key="d7">TRAINED_ON</data>
+    </edge>
+    <edge source="DeepDerm" target="melanoma">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DeepDerm" target="atopic_dermatitis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DeepDerm" target="psoriasis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DeepDerm" target="acne_vulgaris">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DeepDerm" target="seborrheic_dermatitis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DeepDerm" target="tinea_versicolor">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DDI-ResNet" target="HAM10000">
+      <data key="d7">TRAINED_ON</data>
+    </edge>
+    <edge source="DDI-ResNet" target="melanoma">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DDI-ResNet" target="atopic_dermatitis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DDI-ResNet" target="psoriasis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DDI-ResNet" target="acne_vulgaris">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DDI-ResNet" target="seborrheic_dermatitis">
+      <data key="d7">DETECTS</data>
+    </edge>
+    <edge source="DDI-ResNet" target="tinea_versicolor">
+      <data key="d7">DETECTS</data>
+    </edge>
+  </graph>
+</graphml>
