@@ -15,13 +15,15 @@ def _load_graph() -> nx.DiGraph:
 
 def query_gap(G: nx.DiGraph | None = None, fst: str = "FST_VI",
               threshold: float = 0.10) -> pd.DataFrame:
-    """Return datasets where coverage for the given FST node is below threshold.
+    """Return datasets where coverage for
+     the given FST node is below threshold.
 
     Parameters
     ----------
     G:         SkinGraph DiGraph; loaded automatically if None.
     fst:       FST node ID to check, e.g. 'FST_V' or 'FST_VI'.
-    threshold: Coverage fraction below which a dataset is flagged (default 0.10).
+    threshold: Coverage fraction below which a dataset is flagged
+     (default 0.10).
 
     Returns
     -------
@@ -45,7 +47,8 @@ def query_gap(G: nx.DiGraph | None = None, fst: str = "FST_VI",
 
 def models_with_gap(G: nx.DiGraph | None = None, fst: str = "FST_VI",
                     threshold: float = 0.10) -> list[str]:
-    """Return model names trained on datasets underrepresented for the given FST.
+    """Return model names trained on datasets
+    underrepresented for the given FST.
 
     Parameters
     ----------
